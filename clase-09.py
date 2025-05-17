@@ -56,3 +56,15 @@ print(min(numeros)) # min() devuelve el elemento mínimo de la lista
 del numeros[0] # del elimina el elemento en la posición 0 de la lista
 print("La lista después de del es:", numeros) # La lista después de del es: [2, 3, 4]
 
+#slicing
+a = [1, 2, 3, 4, 5]
+b = a # b es una referencia a la lista a, y comparte el mismo espacio en memoria
+del a[0] # al eliminar el primer elemento de a, también se elimina de b
+print("La lista a es:", a) # La lista a es: [2, 3, 4, 5]
+print("La lista b es:", b) # La lista b es: [2, 3, 4, 5]
+# Para crear una copia de la lista a, usamos slicing
+c = a[:] # c es una copia de la lista a, y no comparte el mismo espacio en memoria
+a.append(6) # al agregar un nuevo elemento a a, no se afecta a c
+print("La lista a es:", a) # La lista a es: [2, 3, 4, 5, 6]
+print("La lista b es:", b) # La lista b es: [2, 3, 4, 5, 6]
+print("La lista c es:", c) # La lista c es: [2, 3, 4, 5]
