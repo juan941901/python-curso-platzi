@@ -34,3 +34,19 @@ print(f"La raíz cúbica de {a} usando math es: {raiz_cubica_math}")
 # Raíz cúbica con math y redondeo
 raiz_cubica_redondeada = round(math.pow(a, 1/3), 2) # Raíz cúbica de a usando math y redondeo a 2 decimales
 print(f"La raíz cúbica de {a} usando math y redondeo es: {raiz_cubica_redondeada}") 
+
+#reglas de precedencia
+# 1. Paréntesis ()
+# 2. Exponentes **
+# 3. Multiplicación y División * /
+# 4. Suma y Resta + -
+
+operacion = 10 + 2 * 3 - 4 / 2 ** 2
+print(f"El resultado de la operación es: {operacion}")
+# 10 + 2 * 3 - 4 / 2 ** 2
+# 10 + 2 * 3 - 4 / 4    
+# 10 + 2 * 3 - 1
+# 10 + 6 - 1
+# 10 + 5
+# 15
+
