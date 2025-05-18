@@ -107,3 +107,26 @@ Exception
 """
 # La jerarquía de excepciones en Python es una estructura de clases que representa diferentes tipos de errores y excepciones que pueden ocurrir durante la ejecución de un programa.
 # Cada clase de excepción hereda de una clase base, lo que permite agrupar excepciones relacionadas y manejarlas de manera más eficiente.
+
+def registrar_usuario(nombre, edad):
+    if not isinstance(edad, int):
+        raise TypeError("La edad debe ser un número entero")
+    if edad < 0:
+        raise ValueError("La edad no puede ser negativa")
+    if edad < 18:
+        raise ValueError("Debes ser mayor de edad para registrarte")
+    print(f"✅ Usuario {nombre} registrado con {edad} años.")
+
+usuarios = [
+    ("Juan", 20),
+    ("Ana", -5),
+    ("Luis", 15),
+    ("Laura", "30"),
+    ("Pedro", 25)
+]
+
+for nombre, edad in usuarios:
+    try:
+        registrar_usuario(nombre, edad)
+    except Exception as e:
+        print(f"⚠️ Error al registrar {nombre}: {e}")
